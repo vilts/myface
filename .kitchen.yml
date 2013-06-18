@@ -1,0 +1,16 @@
+---
+driver_plugin: lxc
+driver_config:
+  use_sudo: true
+ 
+platforms:
+  - name: ubuntu-12.04
+    driver_config:
+      base_container: ubuntu_12.04
+      username: ubuntu
+      password: ubuntu
+ 
+suites:
+- name: default
+  run_list: ["recipe[myface]"]
+  attributes: {}
